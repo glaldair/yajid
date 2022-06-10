@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { useCartContext } from '../context/CartContext';
 import FinishModal from './FinishModal';
 const Checkout = () => {
