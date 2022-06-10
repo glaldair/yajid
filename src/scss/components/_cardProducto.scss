@@ -1,0 +1,86 @@
+.containerCards{
+    width: 100%;
+    overflow: hidden;
+    @include grid(5,.5rem);
+}
+.containerCards__four{
+    width: 100%;
+    overflow: hidden;
+    @include grid(4,1rem);
+}
+
+.cardProducto{
+    width: 100%;
+    height: 45rem;
+    position: relative;
+    outline: 2px solid $color-blanco;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        outline: 2px solid $color-azul-3;
+        outline-offset: -5px;
+        .cardProducto__btnFavorito{
+            opacity: 1;
+        }
+    }
+    &__btnFavorito{
+        position: absolute;
+        color: $color-negro-3;
+        top: 1rem;
+        right: 1rem;
+        padding: 0 .5rem;
+        font-size: 2.5rem;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 1;
+        &:hover{
+            color: $color-rojo-5;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        &-img{
+            object-fit: contain;
+            transform: scale(.9);
+        }
+    }
+    &__info{
+        width: 100%;
+        height: 30%;
+        overflow: hidden;
+        @include flex(column, nowrap, center, center);
+        padding: 0 1.5rem;
+        &-name{
+            font: {
+                family: $font-jost;
+                weight: 400;
+                size: 1.9rem;
+            }
+        }
+        &-descripcion{
+            color: $color-negro-8;
+            letter-spacing: -.5px;
+            font: {
+                family: $font-jost;
+                weight: 400;
+                size: 1.5rem;
+            }
+        }
+        &-precio{
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 2rem;
+            }
+            &-moneda{
+                font: {
+                    family: $font-jost;
+                    weight: 400;
+                    size: 1.5rem;
+                }
+            }
+        }
+    }
+}

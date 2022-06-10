@@ -1,0 +1,172 @@
+.checkout{
+    width: 100%;
+    overflow: hidden;
+    &__header{
+        background: rgb(0,0,0);
+        background: radial-gradient(circle, rgba(0,0,0,1) 18%, rgba(191,38,38,1) 96%, rgba(255,255,255,1) 100%);
+        color: $color-blanco;
+        width: 100%;
+        height: 25vh;
+        padding: 2rem 0;
+        @include flex(column, nowrap, center, flex-end);
+        &-title{
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 2.5rem;
+            }
+        }
+    }
+    &__form{
+        width: 100%;
+        padding: 2rem;
+        overflow: hidden;
+        &-content{
+            width: 80%;
+            margin: 0 auto;
+            @include flex(column, nowrap, center, center);
+        }
+        &-items{
+            width: 100%;
+            min-width: 100%;
+            @include grid(2, 1rem);
+        }
+        &-group{
+            width: 100%;
+            min-width: 100%;
+            margin: 1rem 0;
+            outline: 1px solid $color-azul-3;
+            @include flex(row, nowrap, center, center);
+            label{
+                width: 30%;
+                padding: 1rem;
+            }
+            input{
+                width: 70%;
+                padding: 1rem;
+            }
+            textarea{
+                width: 70%;
+                min-width: 70%;
+                max-width: 70%;
+                min-height: 5rem;
+                max-height: 20rem;
+                padding: 1rem;
+            }
+        }
+        &-footer{
+            width: 100%;
+            padding: 2rem;
+            @include flex(row, wrap, center, center);
+        }
+        &-button{
+            background: $color-negro;
+            color: $color-blanco;
+            width: 30rem;
+            margin: 0 .5rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 1.8rem;
+            }
+            transition: all .2s ease-in-out;
+            &.return{
+                background: $color-violeta;
+                color: $color-blanco;
+            }
+            &.reset{
+                background: $color-rojo;
+                color: $color-blanco;
+                &:hover{
+                    background: $color-rojo-3;
+                }
+            }
+            &.confirm{
+                background: $color-azul;
+                color: $color-blanco;
+                &:hover{
+                    background: $color-azul-3;
+                }
+            }
+            &.disabled{
+                background: $color-negro-3;
+                color: $color-blanco;
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+.finishModal{
+    background: $color-negro-5;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 21;
+    @include flex(column, nowrap, center, center);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    pointer-events: none;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        pointer-events: auto;
+    }
+    &__content{
+        background: $color-blanco;
+        width: 70rem;
+        height: 35rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        @include flex(column, nowrap, center, center);
+        text-align: center;
+    }
+    &__title{
+        color: $color-violeta;
+        text-shadow: 2px 2px 1px $color-naranja;
+        font: {
+            family: $font-jost;
+            weight: 700;
+            size: 3rem;
+        };
+    }
+    &__text{
+        color: $color-violeta;
+        font: {
+            family: $font-jost;
+            weight: 700;
+            size: 1.8rem;
+        };
+    }
+    &__footer{
+        @include flex(row, nowrap, center, center);
+        &-button{
+            background: $color-violeta;
+            color: $color-blanco;
+            width: 30rem;
+            margin: 0 .5rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 1.8rem;
+            }
+            transition: all .2s ease-in-out;
+            &:hover{
+                background: $color-violeta-3;
+            }
+        }
+    }
+}

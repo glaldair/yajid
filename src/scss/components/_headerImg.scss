@@ -1,0 +1,40 @@
+.sectionsHeader{
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    position: relative;
+    &__image{
+        width: 100%;
+        height: 100%;
+        &-img{
+            object-fit: cover;
+        }
+    }
+    &__text{
+        position: absolute;
+        background: $color-negro-5;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include flex(column, nowrap, center, center);
+        &-title{
+            color: $color-amarillo;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 5rem;
+            }
+        }
+        &-description{
+            color: $color-blanco;
+            margin-top: 1rem;
+            letter-spacing: 0.1rem;
+            font: {
+                family: $font-space;
+                weight: 800;
+                size: 1.8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.loading {
+    background: $color-negro;
+    color: $color-blanco;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 20;
+    &__image{
+        width: 100%;
+        height: 100%;
+        padding: 10rem;
+        &-logo{
+            object-fit: contain;
+            animation: loading-image 1.5s infinite;
+        }
+    }
+    &__text{
+        background: $color-negro-8;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include flex(row, nowrap, center, center);
+        &-title{
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 4rem;
+            }
+        }
+    }
+}
+
+// Animacion de la imagen de fondo del loading
+
+@keyframes loading-image {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,17 @@
+// Importando el reseteo general de la pagina
+@import './root/variables';
+@import './root/mixin';
+@import './root/root';
+
+@import './components/navbar';
+@import './components/loading';
+@import './components/headerImg';
+@import './components/cardProducto';
+@import './components/footer';
+@import './components/subnavbar';
+
+@import './sections/intro';
+@import './sections/sectionCards';
+@import './sections/itemDetail';
+@import './sections/cart';
+@import './sections/checkout';

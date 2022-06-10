@@ -1,0 +1,60 @@
+/*
+// Colores principales
+*/
+$color-blanco: rgb(255, 255, 255);
+    $color-blanco-3: rgba(255, 255, 255, 0.3);
+    $color-blanco-5: rgba(255, 255, 255, 0.5);
+    $color-blanco-8: rgba(255, 255, 255, 0.8);
+$color-gris: rgb(230, 230, 230);
+    $color-gris-3: rgba(230, 230, 230, 0.3);
+    $color-gris-5: rgba(230, 230, 230, 0.5);
+    $color-gris-8: rgba(230, 230, 230, 0.8);
+$color-gris-oscuro: rgb(200, 200, 200);
+    $color-gris-oscuro-3: rgba(200, 200, 200, 0.3);
+    $color-gris-oscuro-5: rgba(200, 200, 200, 0.5);
+    $color-gris-oscuro-8: rgba(200, 200, 200, 0.8);
+$color-negro: rgb(0, 0, 0);
+    $color-negro-3: rgba(0, 0, 0,0.3);
+    $color-negro-5: rgba(0, 0, 0,0.5);
+    $color-negro-8: rgba(0, 0, 0,0.8);
+
+
+
+/*
+// Paleta de colores
+*/
+$color-rojo: rgb(212, 16, 16);
+    $color-rojo-3: rgba(212, 16, 16, .3);
+    $color-rojo-5: rgba(212, 16, 16, .5);
+    $color-rojo-8: rgba(212, 16, 16, .8);
+$color-naranja: rgb(238, 80, 7);
+    $color-naranja-3: rgba(238, 80, 7, .3);
+    $color-naranja-5: rgba(238, 80, 7, .5);
+    $color-naranja-8: rgba(238, 80, 7, .8);
+$color-amarillo: rgb(248, 203, 46);
+    $color-amarillo-3: rgba(248, 203, 46, .3);
+    $color-amarillo-5: rgba(248, 203, 46, .5);
+    $color-amarillo-8: rgba(248, 203, 46, .8);
+$color-azul: rgb(0, 110, 127);
+    $color-azul-3: rgba(0, 110, 127, .3);
+    $color-azul-5: rgba(0, 110, 127, .5);
+    $color-azul-8: rgba(0, 110, 127, .8);
+$color-violeta: rgb(42, 37, 80);
+    $color-violeta-3: rgba(42, 37, 80, .3);
+    $color-violeta-5: rgba(42, 37, 80, .5);
+    $color-violeta-8: rgba(42, 37, 80, .8);
+
+
+
+/*
+// Tipografias
+*/
+    // 
+    @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    // font-family: 'Jost', sans-serif;
+    $font-jost: 'Jost', sans-serif;
+
+    // 
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    // font-family: 'Space Grotesk', sans-serif;
+    $font-space: 'Space Grotesk', sans-serif;

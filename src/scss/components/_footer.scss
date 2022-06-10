@@ -1,0 +1,83 @@
+.footer{
+    width: 100%;
+    overflow: hidden;
+    @include grid(2,0);
+    &__header{
+        background: $color-negro;
+        color: $color-gris-8;
+        width: 100%;
+        height: 85vh;
+        padding: 3rem;
+        &-title{
+            color: $color-rojo;
+            text-shadow: 4px 4px 2px $color-azul;
+            letter-spacing: .1rem;
+            font: {
+                family: $font-space;
+                weight: bold;
+                size: 6rem;
+            }
+        }
+        &-subtitle{
+            color: $color-amarillo;
+            padding: .5rem 1rem;
+            font: {
+                family: $font-space;
+                weight: regular;
+                size: 2.5rem;
+            }
+        }
+        &-text{
+            color: $color-blanco-8;
+            padding: 2.5rem 1rem;
+            font: {
+                family: $font-space;
+                weight: 300;
+                size: 3rem;
+            }
+        }
+        &-link{
+            outline: 2px solid $color-blanco;
+            color: $color-blanco-8;
+            margin: 0 2rem;
+            padding: .5rem 2rem;
+            font: {
+                family: $font-jost;
+                weight: 300;
+                size: 2rem;
+            }
+            transition: all .2s ease;
+            &:hover{
+                outline: 2px solid $color-amarillo;
+                color: $color-amarillo;
+            }
+        }
+        &-lists{
+            width: 100%;
+            margin: 2rem 0;
+            padding: 2rem;
+            @include grid(2,0);
+        }
+        &-list{
+            width: 95%;
+            padding: 0;
+            @include flex(column, nowrap, flex-start, center);
+        }
+        &-item{
+            color: $color-blanco-8;
+            padding: .5rem 0;
+            font: {
+                family: $font-jost;
+                weight: 300;
+                size: 1.7rem;
+            }
+        }
+    }
+    &__info{
+        background: $color-blanco;
+        color: $color-negro;
+        width: 100%;
+        height: 85vh;
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,311 @@
+.cart{
+    width: 100%;
+    overflow: hidden;
+    &__header{
+        background: rgb(212,16,16);
+        background: radial-gradient(circle, rgba(212,16,16,1) 4%, rgba(42,37,80,1) 100%);
+        color: $color-blanco;
+        width: 100%;
+        height: 25vh;
+        padding: 2rem 0;
+        @include flex(column, nowrap, center, flex-end);
+        &-title{
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 2.5rem;
+            }
+        }
+    }
+    &__body{
+        width: 100%;
+        padding: 1rem;
+        overflow: hidden;
+        @include flex(row, nowrap, center, column);
+        &-items{
+            width: 70%;
+            overflow: hidden;
+            padding: 1rem;
+            .cartItem{
+                outline: 2px solid $color-azul;
+                width: 100%;
+                height: 15rem;
+                margin-bottom: 1rem;
+                padding: 1rem;
+                @include flex(row, nowrap, center, center);
+                &__image{
+                    width: 15%;
+                    height: 100%;
+                    img{
+                        object-fit: contain;
+                    }
+                }
+                &__info{
+                    width: 85%;
+                    height: 100%;
+                    @include flex(row, nowrap, center, center);
+                    &-name{
+                        width: 30%;
+                        height: 100%;
+                        @include flex(column, nowrap, center, center);
+                    }
+                    &-price{
+                        width: 15%;
+                        height: 100%;
+                        @include flex(column, nowrap, center, center);
+                    }
+                    &-quantity{
+                        width: 25%;
+                        height: 100%;
+                        @include flex(column, nowrap, center, center);
+                        &-container{
+                            outline: 1px solid $color-azul;
+                            width: 100%;
+                            height: 4rem;
+                            @include flex(row, nowrap, center, center);
+                        }
+                        &-button{
+                            width: 25%;
+                            height: 100%;
+                            overflow: hidden;
+                            cursor: pointer;
+                            @include flex(column, nowrap, center, center);
+                            svg{
+                                width: 2rem;
+                                height: 2rem;
+                                fill: $color-azul;
+                            }
+                        }
+                        &-input{
+                            width: 50%;
+                            height: 100%;
+                            text-align: center;
+                            overflow: hidden;
+                        }
+                    }
+                    &-total{
+                        width: 20%;
+                        height: 100%;
+                        @include flex(column, nowrap, center, center);
+                    }
+                    &-remove{
+                        width: 10%;
+                        height: 100%;
+                        @include flex(column, nowrap, center, center);
+                        &-button{
+                            width: 3rem;
+                            height: 3rem;
+                            cursor: pointer;
+                            overflow: hidden;
+                            svg{
+                                fill: $color-rojo;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__preview{
+        width: 30%;
+        padding: 1rem;
+        &-map{
+            width: 100%;
+            height: 100%;
+        }
+        &-info{
+            width: 100%;
+            height: 100%;
+            @include flex(column, nowrap, center, center);
+        }
+        &-title{
+            color: $color-azul;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 2.5rem;
+            }
+        }
+    }
+    &__clear{
+        width: 70%;
+        padding: 2rem 1rem;
+        overflow: hidden;
+        @include flex(row, nowrap, center, center);
+        &-button{
+            background: $color-rojo-8;
+            color: $color-blanco;
+            margin: 0.5rem;
+            padding: 1rem 3rem;
+            cursor: pointer;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 2rem;
+            }
+            transition: all .2s ease-in-out;
+            &:hover{
+                background: $color-blanco;
+                color: $color-rojo;
+                outline: 2px solid $color-rojo;
+            }
+            &.total{
+                background: $color-azul;
+                color: $color-blanco;
+                margin: 0.5rem;
+                padding: 1rem 3rem;
+                cursor: pointer;
+                font: {
+                    family: $font-jost;
+                    weight: 700;
+                    size: 2rem;
+                }
+                transition: all .2s ease-in-out;
+                &:hover{
+                    background: $color-blanco;
+                    color: $color-azul;
+                    outline: 2px solid $color-azul;
+                }
+            }
+        }
+    }
+    &__modal{
+        background: $color-negro-5;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 21;
+        @include flex(column, nowrap, center, center);
+        transition: all .2s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.1);
+        pointer-events: none;
+        &.active{
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+        &-content{
+            background: $color-blanco;
+            width: 70rem;
+            height: 35rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            @include flex(column, nowrap, center, center);
+        }
+        &-title{
+            color: $color-violeta;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 2.5rem;
+            }
+        }
+        &-total{
+            &-number{
+                color: $color-rojo;
+                text-shadow: 2px 2px 1px $color-azul;
+                font: {
+                    family: $font-jost;
+                    weight: 700;
+                    size: 4rem;
+                }
+            }
+            &-moneda{
+                color: $color-naranja;
+                text-shadow: 2px 2px 1px $color-azul;
+                font: {
+                    family: $font-jost;
+                    weight: 400;
+                    size: 2.5rem;
+                }
+            }
+        }
+        &-text{
+            color: $color-violeta;
+            font: {
+                family: $font-jost;
+                weight: 400;
+                size: 2rem;
+            }
+        }
+        &-buttons{
+            @include flex(row, nowrap, center, center);
+            width: 100%;
+            &-button{
+                background: $color-negro;
+                color: $color-blanco;
+                width: 17rem;
+                margin: 0 .3rem;
+                margin-top: 1rem;
+                padding: 1rem;
+                text-align: center;
+                border-radius: .5rem;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+                &.cancelar{
+                    background: $color-rojo;
+                    color: $color-blanco;
+                    &:hover{
+                        background: $color-blanco;
+                        color: $color-rojo;
+                        outline: 2px solid $color-rojo;
+                    }
+                }
+                &.chekout{
+                    background: $color-azul;
+                    color: $color-blanco;
+                    &:hover{
+                        background: $color-blanco;
+                        color: $color-azul;
+                        outline: 2px solid $color-azul;
+                    }
+                }
+            }
+        }
+    }
+    &__empty{
+        width: 100%;
+        height: 30vh;
+        @include flex(column, nowrap, center, center);
+        &-title{
+            color: $color-violeta;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 4rem;
+            }
+        }
+        &-text{
+            color: $color-azul;
+            font: {
+                family: $font-jost;
+                weight: 400;
+                size: 2rem;
+            }
+        }
+        &-button{
+            background: $color-azul;
+            color: $color-blanco;
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 
+                1.7rem;
+            }
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background: $color-blanco;
+                color: $color-azul;
+                outline: 2px solid $color-azul;
+            }
+        }
+    }
+}

@@ -1,0 +1,282 @@
+.itemDetail{
+    width: 100%;
+    overflow: hidden;
+    @include flex(row, nowrap, center, center);
+    &__slider{
+        width: 60%;
+        height: 80vh;
+        @include flex(row, nowrap, center, center);
+        &-img{
+            width: 20%;
+            height: 100%;
+            padding: 0 1rem;
+            overflow: scroll;
+            &-container{
+                width: 100%;
+                height: calc(100% / 4);
+                margin: 1rem 0;
+                outline: 1px solid $color-violeta;
+                overflow: hidden;
+                pointer-events: none;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: auto;
+                cursor: pointer;
+                transition: opacity .2s ease-in-out;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+        &-lightbox{
+            width: 80%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            position: relative;
+            img{
+                pointer-events: auto;
+                object-fit: contain; 
+            }
+            // &-lupa{
+            //     background: transparent;
+            //     width: 30rem;
+            //     height: 30rem;
+            //     top: 0;
+            //     left: 0;
+            //     position: absolute;
+            //     pointer-events: auto;
+            //     outline: 1px solid $color-violeta;
+            //     transition: all .2s ease-in-out;
+            // }
+        }
+    }
+    &__details{
+        width: 40%;
+        height: 80vh;
+        &-content{
+            width: 100%;
+            padding: 1rem 2rem;
+        }
+        &-name{
+            color: $color-negro-8;
+            padding: 2rem 0 0;
+            font: {
+                family: $font-space;
+                weight: 700;
+                size: 3.5rem;
+            }
+        }
+        &-descripcion{
+            color: $color-violeta;
+            font: {
+                family: $font-jost;
+                weight: 300;
+                size: 2rem;
+            }
+        }
+        &-codigo{
+            color: $color-violeta;
+            padding: .5rem 0;
+            font: {
+                family: $font-jost;
+                weight: 400;
+                size: 1.5rem;
+            }
+        }
+        &-price{
+            margin: 2rem 0;
+        }
+        &-precio{
+            color: $color-violeta;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 5rem;
+            }
+        }
+        &-moneda{
+            color: $color-violeta;
+            padding: 0 1rem;
+            font: {
+                family: $font-jost;
+                weight: 400;
+                size: 2rem;
+            }
+        }
+        &-mayoreo{
+            width: 100%;
+            @include flex(row, nowrap, center, flex-start);
+            text-align: center;
+            &-container{
+                background: $color-azul;
+                color: $color-blanco;
+                padding: .5rem 1.5rem;
+                width: auto;
+            }
+            &-title{
+                font: {
+                    family: $font-jost;
+                    weight: 700;
+                    size: 1.5rem;
+                };
+            }
+            &-cantidad{
+                margin-left: 1rem;
+                font: {
+                    family: $font-jost;
+                    weight: 400;
+                    size: 1.5rem;
+                };
+            }
+            &-precio{
+                font: {
+                    family: $font-jost;
+                    weight: 700;
+                    size: 1.5rem;
+                };
+            }
+            &-moneda{
+                margin-left: .5rem;
+                font: {
+                    family: $font-jost;
+                    weight: 300;
+                    size: 1.4rem;
+                };
+            }
+        }
+        &-marca{
+            margin: 1rem 0;
+            &-title{
+                color: $color-azul;
+                font: {
+                    family: $font-jost;
+                    weight: 700;
+                    size: 2rem;
+                };
+            }
+            &-nombre{
+                color: $color-negro-8;
+                padding: 0 .5rem;
+                font: {
+                    family: $font-jost;
+                    weight: 400;
+                    size: 2rem;
+                };
+            }
+        }
+        &-stock{
+            &-text{
+                color: $color-violeta;
+                font: {
+                    family: $font-jost;
+                    weight: 400;
+                    size: 2rem;
+                };
+            }
+            &-number{
+                color: $color-violeta;
+                font: {
+                    family: $font-jost;
+                    weight: 700;
+                    size: 2rem;
+                };
+            }
+        }
+    }
+    &__info{
+        width: 100%;
+        @include grid(2, 1rem);
+        &-details{
+            width: 100%;
+            padding: 3rem;
+            overflow: hidden;
+        }
+        &-title{
+            color: $color-violeta;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 3rem;
+            };
+        }
+        &-text{
+            color: $color-negro-8;
+            font: {
+                family: $font-jost;
+                weight: 400;
+                size: 2rem;
+            }
+        }
+    }
+}
+
+.quantity{
+    width: 100%;
+    padding: 0 2rem;
+    @include grid(2,1rem);
+    &-input{
+        width: 100%;
+        height: 5rem;
+        overflow: hidden;
+        outline: 1px solid $color-negro;
+        @include flex(row, nowrap, center, center);
+        &-button{
+            width: 20%;
+            height: 100%;
+            cursor: pointer;
+            @include flex(column, nowrap, center, center);
+            svg{
+                width: 3rem;
+            }
+        }
+        &-number{
+            width: 60%;
+            height: 100%;
+            text-align: center;
+        }
+    }
+    &-button{
+        color: $color-naranja;
+        width: 100%;
+        padding: 1rem 0;
+        outline: 1px solid $color-naranja;
+        text-align: center;
+        cursor: pointer;
+        font: {
+            family: $font-jost;
+            weight: 700;
+            size: 2rem;
+        };
+        transition: all .2s ease-in-out;
+        &:hover{
+            background: $color-naranja;
+            color: $color-blanco;
+            outline: 2px solid $color-blanco;
+            outline-offset: -.5rem;
+        }
+        &.carrito{
+            color: $color-rojo;
+            outline: 1px solid $color-rojo;
+            &:hover{
+                background: $color-rojo;
+                color: $color-blanco;
+                outline: 2px solid $color-blanco;
+                outline-offset: -.5rem;
+            }
+        }
+        &.comprar{
+            color: $color-violeta;
+            outline: 1px solid $color-violeta;
+            &:hover{
+                background: $color-violeta;
+                color: $color-blanco;
+                outline: 2px solid $color-blanco;
+                outline-offset: -.5rem;
+            }
+        }
+    }
+}

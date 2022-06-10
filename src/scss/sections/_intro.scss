@@ -1,0 +1,106 @@
+.intro{
+    width: 100%;
+    overflow: hidden;
+    &__imageBackground{
+        background: $color-negro;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding: 10rem;
+        overflow: hidden;
+        &-image{
+            object-fit: contain;
+            animation: intro-image-background 20s infinite;
+        }
+    }
+    &__header {
+        background: $color-negro-8;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @include flex(column, nowrap, center, center);
+        &-title{
+            color: $color-blanco;
+            padding: 0;
+            font: {
+                family: $font-jost;
+                weight: 700;
+                size: 6rem;
+            }
+        }
+        &-slogan{
+            color: $color-gris;
+            font: {
+                family: $font-space;
+                weight: 500;
+                size: 3rem;
+            }
+        }
+        &-buttons{
+            margin-top: 5rem;
+            @include flex(row, nowrap, center, center);
+        }
+        &-button{
+            color: $color-blanco;
+            width: 20rem;
+            margin: 0 1rem;
+            padding: .5rem 0;
+            text-align: center;
+            text-transform: capitalize;
+            border-radius: 10rem;
+            font: {
+                family: $font-jost;
+                weight: 500;
+                size: 2rem;
+            }
+            transition: all .2s ease;
+            &:hover{
+                outline: 2px solid $color-blanco;
+                outline-offset: -.5rem;
+                letter-spacing: .3rem;
+            }
+            &.btn1{
+                animation: intro-background-button-1 3s infinite alternate;
+            }
+            &.btn2{
+                animation: intro-background-button-2 3.1s infinite alternate;
+            }
+        }
+    }
+}
+
+// Animacion de fondo
+
+@keyframes intro-image-background{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+// Animacion de color de fondo
+
+@keyframes intro-background-button-1 {
+    from{
+        background: transparent;
+    }
+    to{
+        background: $color-blanco;
+        color: $color-negro;
+        outline-color: $color-negro;
+    }
+}
+@keyframes intro-background-button-2 {
+    from{
+        background: transparent;
+    }
+    to{
+        background: $color-blanco;
+        color: $color-negro;
+        outline-color: $color-negro;
+    }
+}
