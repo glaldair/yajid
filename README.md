@@ -24,7 +24,7 @@ Esto para optimizar las constantes peticiones a la base de datos
 Algunas imagenes que no cargan en la web no es por error, solo son rutas que no existen
 Coloqué imágenes de prueba para ver la funcionalidad del itemDetail
 ## Vista previa
-https://user-images.githubusercontent.com/89609096/173128961-92e49470-7b37-4bba-b8e7-3076a19d540a.mp4
+https://user-images.githubusercontent.com/89609096/173132508-1e21ba3f-dff0-4ed1-826d-2a93d3d52bfb.mp4
 ## Tecnologías usadas
 
     *React

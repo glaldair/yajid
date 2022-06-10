@@ -2,7 +2,7 @@ import { useCartContext } from '../context/CartContext';
 import FinishModal from './FinishModal';
 const Checkout = () => {
 
-    const { cart } = useCartContext();
+    const { cart, deleteCart } = useCartContext();
 
     // Si no hay productos en el carrito rediriigir a la página principal
     if (cart.length === 0) {
@@ -17,15 +17,18 @@ const Checkout = () => {
     
     
     // Si se hace click en el boton de pagar, se muestra el modal de pago
-    const handlePay = (e) => {
+    const handlePay = async (e) => {
         e.preventDefault();
         document.querySelector('.finishModal').classList.add('active');
 
         // Si se hace click en el boton de regresar, redirigir a la página productos
+
+        // Vaciar el carrito
         setTimeout(() => {
             document.querySelector('.finishModal').classList.remove('active');
             window.location.href = "/productos";
         }, 10000);
+        deleteCart();
     }
 
     return (
