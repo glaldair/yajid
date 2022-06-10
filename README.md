@@ -23,6 +23,8 @@ Esto para optimizar las constantes peticiones a la base de datos
 
 Algunas imagenes que no cargan en la web no es por error, solo son rutas que no existen
 Coloqué imágenes de prueba para ver la funcionalidad del itemDetail
+
+Al ir al la parte final de la compra (checkout) no se manda la data a niguna parte, solo se limpia el carrito por cuanto es una página de prueba
 ## Vista previa
 https://user-images.githubusercontent.com/89609096/173132508-1e21ba3f-dff0-4ed1-826d-2a93d3d52bfb.mp4
 ## Tecnologías usadas
